@@ -1,0 +1,165 @@
+// Place all the styles related to the main_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.carousel-inner {
+	margin-top: 50px;
+}
+
+.carousel-control.right {
+	background-image: none;
+}
+
+.carousel-control.left {
+	background-image: none;
+}
+
+.loeffel-icon {
+	position: absolute;
+	top: 50%;
+}
+
+.loeffel-links {
+	left: 50%;
+}
+.loeffel-rechts {
+	right: 50%;
+}
+
+.carousel-container {
+	margin-top: 50px;
+}
+
+.oeffnung {
+	text-align: center;
+	margin-top: 60px;
+	margin-bottom: 100px;
+	font-size: 1.4em;
+	text-transform: uppercase;
+	width: 80%;
+}
+
+.loeffelpfeil3 {
+	padding-top: 50px; 
+}
+
+blockquote {
+	width: 60%;
+	display: block;
+	margin: 0 auto;
+	border: none;
+	margin-top: 50px;
+}
+
+blockquote > h2 {
+	text-align: center;
+}
+
+blockquote > p {
+	margin-top: 30px;
+	font-size: 0.9em;
+	text-align: justify;
+}
+
+.menue-row {
+	margin-top: 10px;
+}
+
+.eiskugel {
+	margin-top: 50px;
+}
+
+.event-cta {
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 50px;
+}
+
+.loeffelpfeil2 {
+	margin-bottom: 100px;
+}
+
+.ownevent {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.cocktail {
+	width: 100%;
+}
+
+.glas {
+	position: relative;
+	width: 80%
+}
+
+.loeffel-links-partner {
+	left: -10%;
+}
+.loeffel-rechts-partner {
+	right: -10%;
+}
+
+.gallerie {
+	margin-top: 80px;
+}
+
+.kontaktform {
+	margin-top: 80px;
+}
+
+.call-us {
+	position: relative;
+	top: 30px;
+}
+
+.kontaktueberschrift {
+	margin-bottom: 50px;
+}
+
+.name,
+.email {
+	margin-bottom: 30px;
+}
+
+
+.textfeld,
+.textarea {
+	width: 100%;
+	border-bottom: 5px dotted #000;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+}
+
+.textfeld {
+	height: 40px;
+}
+
+.textarea {
+	height: 80px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+}
+
+.label {
+	position: relative;
+	top: 10px;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	color: #000;
+}
+
+.btn-default {
+	float: right;
+}
+
+.find-us {
+	position: relative;
+	top: 10%;
+}
+
