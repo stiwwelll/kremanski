@@ -16,3 +16,17 @@
 //= require turbolinks
 //= require lightbox
 //= require_tree .
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 52.5000723, lng: 13.4177044},
+    zoom: 16
+  });
+  var image = 'assets/K_Pfeil.png';
+  var beachMarker = new google.maps.Marker({
+    position: {lat: 52.5000723, lng: 13.4177044},
+    map: map,
+    icon: image
+  });
+ }

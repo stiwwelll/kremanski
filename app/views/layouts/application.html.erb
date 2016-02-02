@@ -2,64 +2,65 @@
 <html lang="de">
 <head>
   <title>Kremanski</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= csrf_meta_tags %>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%= csrf_meta_tags %>
  
 </head>
 <body data-spy="scroll" data-target=".navbar">
 	<div id=wrap>
 		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		  	<div class="row">
-		  		<div class="col-xs-10 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
-		  	
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-10 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
 
-		      <a class="navbar-brand" href="#">
-        		<%= image_tag("Kremanski_Logo_226px.png") %>
-      		</a>
-		    </div>
+				<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
 
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse">
-		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="#">About <span class="sr-only">(current)</span></a></li>
-		        <li><a href="#">Events</a></li>
-		        <li><a href="#">Gallery</a></li>
-		        <li><a href="#">Patners &amp; Products</a></li>
-		        <li><a href="#">Contact</a></li>
-		      </ul>
-		       <div class="social-buttons">
-			      <a class="facebook-icon" href="https://www.facebook.com/kremanski/" target="_blank">
-	        		<%= image_tag("Icon_FB_30x30.png", class: "facebook") %>
-	      		</a>
-	      		<a class="maps-icon" href="#">
-	        		<%= image_tag("Icon_Maps_30x30.png", class: "maps") %>
-	      		</a>
-	      		<a class="instagram-icon" href="#">
-	        		<%= image_tag("Icon_Instagram_30x30.png", class: "instagram") %>
-	      		</a>
-      		</div>
-		    </div><!-- /.navbar-collapse -->
-		    </div>
-		    </div>
+							<a class="navbar-brand" href="#">
+								<%= image_tag("Kremanski_Logo_226px.png") %>
+							</a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="#">About <span class="sr-only">(current)</span></a></li>
+								<li><a href="#">Events</a></li>
+								<li><a href="#">Gallery</a></li>
+								<li><a href="#">Patners &amp; Products</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+							<div class="social-buttons">
+								<a class="facebook-icon" href="https://www.facebook.com/kremanski/" target="_blank">
+								<%= image_tag("Icon_FB_30x30.png", class: "facebook") %>
+								</a>
+								<a class="maps-icon" href="#">
+									<%= image_tag("Icon_Maps_30x30.png", class: "maps") %>
+								</a>
+								<a class="instagram-icon" href="#">
+									<%= image_tag("Icon_Instagram_30x30.png", class: "instagram") %>
+								</a>
+							</div>
+						</div><!-- /.navbar-collapse -->
+					</div>
+				</div>
 			</div><!-- /.container-fluid -->
 		</nav>
 	<%= yield %>
 	</div>
+	<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLRwunMi2LxFy5bF8-XaOK7CFoZhOleg&callback=initMap">
+	</script>
 </body>
 </html>
