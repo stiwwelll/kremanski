@@ -160,12 +160,10 @@
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         <%= image_tag("Circle_Call_Us.png", class: "center-block img-responsive call-us") %>
       </div>
-      <%= form_tag('/post') do %>
+      <%= form_tag('/main_pages/index') do %>
         <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-7 col-lg-7">
-          <h1 class="kontaktueberschrift">Wir freuen uns auf eure Nachrichten!</h1>
-
           <%= flash[:notice] %>
-          
+          <h1 class="kontaktueberschrift">Wir freuen uns auf eure Nachrichten!</h1>
           <div class="form-group">
             <div class="row name">
               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
