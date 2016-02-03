@@ -13,6 +13,8 @@ gem 'figaro'
 gem 'mailgun_rails'
 gem 'friendly_id'
 gem 'lightbox2-rails'
+gem 'mail_form'
+gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -25,6 +27,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem 'mailcatcher'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

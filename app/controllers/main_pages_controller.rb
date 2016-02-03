@@ -1,9 +1,6 @@
 class MainPagesController < ApplicationController
   
   def index
-  end
-
-  def form
   	@name = params[:name]
     @email = params[:email]
     @message = params[:message]
