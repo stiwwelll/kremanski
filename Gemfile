@@ -13,8 +13,7 @@ gem 'figaro'
 gem 'mailgun_rails'
 gem 'friendly_id'
 gem 'lightbox2-rails'
-gem 'mail_form'
-gem 'simple_form'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
