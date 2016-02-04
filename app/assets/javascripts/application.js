@@ -30,3 +30,23 @@ function initMap() {
     icon: image
   });
  }
+
+
+var ready;
+ready = function() {
+
+   var $root = $('html, body');
+    $('.navbar-nav a').click(function() {
+        var href = $.attr(this, 'href');
+        $root.animate({
+            scrollTop: $(href).offset().top
+        }, 1000, function () {
+            window.location.hash = href;
+        });
+        return false;
+    });
+
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);

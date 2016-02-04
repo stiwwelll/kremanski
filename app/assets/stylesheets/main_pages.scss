@@ -2,6 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#about.anchor {
+	padding-top: 40px;
+}
+
+#events.anchor,
+#gallery.anchor {
+	padding-top: 80px;
+}
+
+#partner.anchor,
+#contact.anchor {
+	padding-top: 70px;
+}
+
+
 .carousel-inner {
 	margin-top: 50px;
 }
@@ -100,11 +115,11 @@ blockquote > p {
 	right: -10%;
 }
 
-.gallerie {
+#gallerie {
 	margin-top: 80px;
 }
 
-.kontaktform {
+#kontakt {
 	margin-top: 80px;
 	margin-bottom: 80px;
 }
@@ -114,8 +129,14 @@ blockquote > p {
 	top: 30px;
 }
 
-.kontaktueberschrift {
+#contact {
 	margin-bottom: 50px;
+}
+
+.col-xs-12 > .kontaktueberschrift,
+.col-sm-12 > .kontaktueberschrift {
+	margin-top: 50px;
+	text-align: center;
 }
 
 .name,
@@ -154,6 +175,11 @@ textarea:focus {
 	color: #000;
 }
 
+.col-xs-12 > .label,
+.col-sm-12 > .label {
+	top: -5px;
+}
+
 .btn-default {
 	float: right;
 }
@@ -169,10 +195,24 @@ textarea:focus {
 
 .social-links {
 	position: relative;
-	margin-left: 11%;
+	margin-left: 4%;
 	text-align: center;
 	line-height: 4em;
 }
+
+.col-xs-12 .vertical-list,
+.col-sm-12 .vertical-list,
+.col-md-12 .vertical-list {
+	display: inline-block;
+	width: 200px;
+}
+
+.col-xs-12 > ul,
+.col-sm-12 > ul,
+.col-md-12 > ul {
+	padding: 0;
+}
+
 
 .find-us-link {
 	text-transform: uppercase;
@@ -189,7 +229,8 @@ textarea:focus {
 	border-top: 0;
 }
 
-#map {
+.map {
 	height: 250px;
-	width: 50%;
+	width: 60%;
 }
+

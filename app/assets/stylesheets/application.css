@@ -28,6 +28,7 @@ body {
 	background-image: url("BG_Wand_Kachel.jpg");
 	background-size: 100%;
 	background-repeat: repeat-y;
+	position: relative;
 }
 
 h1 {

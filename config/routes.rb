@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   get 'main_pages/index'
 
-  post 'main_pages/index' 
 
 
   # The priority is based upon order of creation: first created -> highest priority.
