@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  match "main_pages/index" => "main_pages#index", as: :main_pages, via: [:get, :post]
+  get 'main_pages/index'
 
 
 
