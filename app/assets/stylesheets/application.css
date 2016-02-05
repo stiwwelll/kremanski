@@ -169,12 +169,27 @@ li {
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 	.navbar-default {
-		font-size: 0.9em;
+		font-size: 1.2em;
+	}
+
+	.navbar ul {
+		top: 0;
+	}
+
+	.social-buttons {
+		top: 2px;
+	}
+
+	.social-buttons img{
+		width: 20%;
 	}
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+	.navbar ul {
+		top: 30px;
+		width: 75%;
+	}
 }
 
