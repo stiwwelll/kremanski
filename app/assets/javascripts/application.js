@@ -31,7 +31,6 @@ function initMap() {
   });
  }
 
-
 var ready;
 ready = function() {
 

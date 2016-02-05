@@ -20,11 +20,12 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 
 body {
 	font-family: 'Futura', Arial, sans-serif;
-  width: 100%;
+	color: #4D4946;
 	background-image: url("BG_Wand_Kachel.jpg");
 	background-size: 100%;
 	background-repeat: repeat-y;
@@ -33,6 +34,10 @@ body {
 
 h1 {
 	font-size: 2em;
+}
+
+h3 {
+	margin-top: 0;
 }
 
 li {
@@ -48,14 +53,20 @@ li {
 	border: none;
 	top: 7px;
 	height: 80px;
+	background-color: #fff;
 	opacity: 0.9;
 	filter: alpha(opacity=90); /* For IE8 and earlier */
 }
 
-.navbar-brand {
-	padding: 0;
+.navbar-toggle,
+.navbar-toggle.collapsed {
 	position: relative;
-	top: 23px;
+	top: 15px;
+}
+
+.navbar-brand {
+	margin-top: 6px;
+	height: 100%
 }
 
 .navbar ul {
@@ -72,15 +83,21 @@ li {
 .navbar-default .navbar-nav>.active>a:focus, 
 .navbar-default .navbar-nav>.active>a:hover {
 	background-color: transparent;
-	font-size: 1.2em;
-	padding-top: 14px;
+	font-size: 1.1em;
+	padding-top: 12px;
+}
+
+#bs-example-navbar-collapse-1 {
+	border: none;
+	background-color: #fff;
+	opacity: 0.9;
+	filter: alpha(opacity=90); /* For IE8 and earlier */
 }
 
 .social-buttons {
 	position: relative;
-	float: left;
-	top: 26px;
-	margin-left: 20px;
+	float: right;
+	top: -22px;
 }
 
 .social-buttons a:hover {
@@ -100,5 +117,64 @@ li {
 .instagram {
 	margin-right: 7px;
 	width: 23%;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+	#bs-example-navbar-collapse-1 {
+		background-color: transparent;
+	}
+
+	.navbar li a {
+		font-size: 0.8em;
+		padding: 0;
+		width: 100px;
+	}
+
+	.navbar li {
+		margin: 0;
+	}
+
+	.navbar ul {
+		position: relative;
+		top: 15px;
+		right: -1%;
+		margin-left: 0;
+		float: right;
+		width: 70%;
+	}
+
+	.navbar-default .navbar-nav>.active>a, 
+	.navbar-default .navbar-nav>.active>a:focus, 
+	.navbar-default .navbar-nav>.active>a:hover {
+		background-color: transparent;
+		font-size: 0.9em;
+		padding-top: 0;
+		position: relative;
+		top: -2px;
+	}
+
+	.social-buttons {
+		top: 21px;
+		right: 14%;
+		width: 13%;
+	}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.navbar-default {
+		font-size: 0.9em;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
 }
 

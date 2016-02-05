@@ -49,49 +49,58 @@
 	text-align: center;
 	margin-top: 60px;
 	margin-bottom: 100px;
-	font-size: 1.4em;
+	font-size: 150%;
 	text-transform: uppercase;
-	width: 80%;
+	width: 70%;
 }
 
 .loeffelpfeil3 {
 	padding-top: 50px; 
 }
 
-blockquote {
-	width: 60%;
+.about {
+	width: 80%;
 	display: block;
 	margin: 0 auto;
 	border: none;
 	margin-top: 50px;
 }
 
-blockquote > h2 {
+.about > h2 {
 	text-align: center;
 }
 
-blockquote > p {
+.about > p {
 	margin-top: 30px;
 	font-size: 0.9em;
 	text-align: justify;
 }
 
 .menue-row {
-	margin-top: 10px;
+	margin-top: 20px;
 }
 
-.eiskugel {
-	margin-top: 50px;
+.menue {
+	margin-top: 30px;
+}
+
+.menue-row > h3 {
+	margin-top: 0;
+}
+
+.archive {
+	padding-top: 12px;
 }
 
 .event-cta {
+	padding: 0 15px;
 	text-align: center;
 	text-transform: uppercase;
 	margin-top: 50px;
 }
 
 .loeffelpfeil2 {
-	margin-bottom: 100px;
+	margin-top: 50px;
 }
 
 .ownevent {
@@ -104,8 +113,7 @@ blockquote > p {
 }
 
 .glas {
-	position: relative;
-	width: 80%
+	margin-top: 30px;
 }
 
 .loeffel-links-partner {
@@ -113,6 +121,11 @@ blockquote > p {
 }
 .loeffel-rechts-partner {
 	right: -10%;
+}
+
+.kaffee {
+	position: relative;
+	top: 30px;
 }
 
 #gallerie {
@@ -135,8 +148,8 @@ blockquote > p {
 
 .col-xs-12 > .kontaktueberschrift,
 .col-sm-12 > .kontaktueberschrift {
-	margin-top: 50px;
-	text-align: center;
+	margin-top: 70px;
+	margin-bottom: 50px;
 }
 
 .name,
@@ -195,9 +208,14 @@ textarea:focus {
 
 .social-links {
 	position: relative;
-	margin-left: 4%;
 	text-align: center;
 	line-height: 4em;
+}
+
+.col-xs-12 .social-links,
+.col-sm-12 .social-links,
+.col-md-12 .social-links {
+	margin-left: 0;
 }
 
 .col-xs-12 .vertical-list,
@@ -205,6 +223,10 @@ textarea:focus {
 .col-md-12 .vertical-list {
 	display: inline-block;
 	width: 200px;
+}
+
+.col-xs-12 .vertical-list {
+	font-size: 0.8em;
 }
 
 .col-xs-12 > ul,
@@ -229,8 +251,29 @@ textarea:focus {
 	border-top: 0;
 }
 
-.map {
+#map {
 	height: 250px;
-	width: 60%;
+	width: 100%;
 }
 
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	address {
+		padding-top: 15px;
+		font-size: 1.2em;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
