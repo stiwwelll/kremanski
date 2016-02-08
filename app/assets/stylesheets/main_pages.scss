@@ -219,15 +219,18 @@ textarea:focus {
 	margin-left: 0;
 }
 
-.col-xs-12 .vertical-list,
-.col-sm-12 .vertical-list,
-.col-md-12 .vertical-list {
+.vertical-list {
 	display: inline-block;
 	width: 150px;
 }
 
 .col-xs-12 .vertical-list {
 	font-size: 0.8em;
+}
+
+.col-lg-12 .vertical-list {
+	display: block;
+	width: 100px;
 }
 
 .col-xs-12 > ul,
