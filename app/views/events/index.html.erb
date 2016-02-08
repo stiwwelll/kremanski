@@ -1,11 +1,11 @@
-<h1>Events</h1>
-  <div class="container">
-    <div class="row">
-        <%= render @events %>
-    </div>
-    <div class="new-event row">
-      <div class="col-md-2 col-xs-12">
-        <%= link_to 'New event', new_event_path, :class => "btn btn-default" %>
-      </div>
+<div class="container event-list">
+  <h1>Events</h1>
+  <div class="row">
+      <%= render @events %>
+  </div>
+  <div class="new-event row">
+    <div class="col-md-2 col-xs-12">
+      <%= link_to 'New event', new_event_path, :class => "btn btn-default" %>
     </div>
   </div>
+</div>

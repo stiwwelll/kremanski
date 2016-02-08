@@ -1,15 +1,15 @@
-<div class="event-list col-md-4 col-xs-12">
+<div class="col-md-4 col-xs-12">
   <div class="event-name">
     <%= link_to event.name, event, class: "button-text" %>
   </div>
     <div class="event-name">
     <%= format_date(event.date) %>
   </div>
-  <div class="event-picture">
+  <div class="event-image">
+    <%= image_tag event.image.url(:medium) %>
   </div>
   <div class="event-description">
     <%= event.description %>
-
   </div>
   <div class="btn-group">
      <%= link_to 'Show', event, class: "btn btn-default btn-xs" %>
