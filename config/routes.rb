@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :events
   get 'main_pages/index'
+
+  post 'main_pages/contact_form'
 
 
 

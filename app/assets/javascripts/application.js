@@ -31,8 +31,8 @@ function initMap() {
   });
  }
 
-var ready;
-ready = function() {
+
+$(function() {
 
    var $root = $('html, body');
     $('.navbar-nav a').click(function() {
@@ -45,7 +45,25 @@ ready = function() {
         return false;
     });
 
-};
+    $("#contact-form-submit").on("click", function(event) {
+      var params;
+      event.preventDefault();
+      
+      params = { name: $("#name").val(), email: $("#email").val(), message: $("#message").val() };
 
-$(document).ready(ready);
-$(document).on('page:load', ready);
+      // add spinner
+      $("#contact-form-submit").addClass("icon-spinner");
+
+
+
+      $.ajax({
+        url: "main_pages/contact_form",
+        data: params,
+        method: "POST"
+      }).done(function(response) {
+        //remove spinner
+        //disable button
+      });
+    });
+
+});
