@@ -212,13 +212,13 @@
             </div>
           </div>
           <div class="submit">
-              <%= submit_tag "Senden", class: "btn btn-default", id: "contact-form-submit" %>
+              <%= submit_tag "Senden", class: "btn btn-default", id: "contact-form-submit", data: {loading_text: "Senden..." } %>
           </div>
         </div>
       <% end %>
     </div>
     <div class="row links-map">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 social-links">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 social-links">
         <ul>
           <li class="vertical-list"><%= link_to "Facebook", "https://www.facebook.com/kremanski/", class: "find-us-link", target: "_blank" %></li>
           <li class="vertical-list"><%= link_to "Instagram", "https://www.instagram.com/cafekremanski/", class: "find-us-link", target: "_blank" %></li>
