@@ -1,11 +1,12 @@
 <table>
   <tbody>
     <tr>
-      <td><p>Hey Andreas! <%= @name %> (<%= @email %>) hat dir eine Nachricht via dem Kontaktformular geschickt:</p></td>
+      <td><p>Hey Andreas! <%= @name %> hat dir eine Nachricht via dem Kontaktformular geschickt:</p></td>
     </tr>
     <tr>
       <td><p><%= @message %></p></td>
       <td><p></p></td>
     </tr>
+    <td><p>Bitte antworte an folgende E-Mail Addresse: <%= @message %></p></td> 
   </tbody>
 </table>
