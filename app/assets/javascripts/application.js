@@ -31,10 +31,9 @@ function initMap() {
   });
  }
 
-
 $(function() {
 
-   var $root = $('html, body');
+  var $root = $('html, body');
     $('.navbar-nav a').click(function() {
         var href = $.attr(this, 'href');
         $root.animate({
@@ -45,25 +44,26 @@ $(function() {
         return false;
     });
 
-    $("#contact-form-submit").on("click", function(event) {
-      var params;
-      event.preventDefault();
-      
-      params = { name: $("#name").val(), email: $("#email").val(), message: $("#message").val() };
+  $("#contact-form-submit").on("click", function(event) {
+    var params;
+    event.preventDefault();
+    
+    params = { name: $("#name").val(), email: $("#email").val(), message: $("#message").val() };
 
-      // add spinner
-      $("#contact-form-submit").addClass("icon-spinner");
+    // add spinner
+    $('#contact-form-submit').on('click', function () {
+        var $btn = $(this).button('loading');
 
-
-
-      $.ajax({
-        url: "main_pages/contact_form",
-        data: params,
-        method: "POST"
-      }).done(function(response) {
-        //remove spinner
-        //disable button
+    $.ajax({
+      url: "main_pages/contact_form",
+      data: params,
+      method: "POST"
+    }).done(function(response) {
+      //remove spinner
+      //disable button
+        $btn.button('disable');
       });
     });
-
+  });
 });
+
