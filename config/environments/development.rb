@@ -40,4 +40,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   config.action_mailer.delivery_method = :letter_opener
 
+  # Adding paperclip support
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+
 end
