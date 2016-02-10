@@ -15,7 +15,9 @@ gem 'friendly_id'
 gem 'lightbox2-rails'
 gem 'quiet_assets'
 gem 'paperclip', '~> 4.3'
-gem 'aws-sdk'
+gem 'aws-s3'
+gem 'aws-sdk-v1'
+gem 'aws-sdk', '~> 2'
 
 
 group :development, :test do
