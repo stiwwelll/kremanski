@@ -9,7 +9,7 @@ class MainPagesController < ApplicationController
     @email = params[:email]
     @message = params[:message]
     render json: { message: "success!" }
-	UserMailer.contact_form(@email, @name, @message).deliver_now
+    UserMailer.contact_form(@email, @name, @message).deliver_now
   end
 
 end
