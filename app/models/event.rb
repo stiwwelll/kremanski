@@ -4,7 +4,7 @@ class Event < ActiveRecord::Base
 
   require 'aws-sdk-v1'
   require 'aws-sdk'
-  has_attached_file :image, styles: { medium: "200x200>", thumb: "100x100>" }, default_url: "http://placehold.it/200x200"
+  has_attached_file :image, styles: { medium: "460x315>", thumb: "175x120>" }, default_url: "http://placehold.it/200x200"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 end
