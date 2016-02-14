@@ -49,7 +49,7 @@
 .oeffnung {
 	text-align: center;
 	margin-top: 60px;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 	font-size: 150%;
 	text-transform: uppercase;
 	width: 70%;
@@ -90,7 +90,15 @@
 }
 
 .archive {
-	padding-top: 12px;
+	padding-top: 8px;
+}
+
+.event-highlights {
+	margin-top: 50px;
+}
+
+.event-linie {
+	padding: 20px 0;
 }
 
 .event-cta {
@@ -107,6 +115,7 @@
 .ownevent {
 	text-transform: uppercase;
 	text-align: center;
+	margin-top: 70px;
 }
 
 .cocktail {
@@ -211,31 +220,11 @@ textarea:focus {
 	position: relative;
 	text-align: center;
 	line-height: 4em;
-}
-
-.col-xs-12 .social-links,
-.col-sm-12 .social-links,
-.col-md-12 .social-links {
 	margin-left: 0;
+	margin-bottom: 30px;
 }
 
-.vertical-list {
-	display: inline-block;
-	width: 150px;
-}
-
-.col-xs-12 .vertical-list {
-	font-size: 0.8em;
-}
-
-.col-lg-12 .vertical-list {
-	display: block;
-	width: 100px;
-}
-
-.col-xs-12 > ul,
-.col-sm-12 > ul,
-.col-md-12 > ul {
+ul {
 	padding: 0;
 }
 
@@ -295,5 +284,8 @@ textarea:focus {
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+	.vertical-list {
+		display: block;
+		width: 100px;
+	}
 }
