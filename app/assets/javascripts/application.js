@@ -50,18 +50,26 @@ $(function() {
     
     params = { name: $("#name").val(), email: $("#email").val(), message: $("#message").val() };
 
-    // add spinner
     $('#contact-form-submit').on('click', function () {
-        var $btn = $(this).button('loading');
+      $(this).prop('disabled', true);
 
-    $.ajax({
-      url: "main_pages/contact_form",
-      data: params,
-      method: "POST"
-    }).done(function(response) {
-      //remove spinner
-      //disable button
-        $btn.button('disable');
+      $.ajax({
+        url: "main_pages/contact_form",
+        data: params,
+        method: "POST"
+      }).done(function(response) {
+        $.notify({
+          // options
+          icon: 'fa fa-coffee',
+          message: response.message
+          },{
+          // settings
+            type: response.status,
+            placement: {
+              from: "bottom",
+              align: "left"
+            },
+        });
       });
     });
   });
