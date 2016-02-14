@@ -5,10 +5,10 @@ class MainPagesController < ApplicationController
   end
 
   def contact_form
-  	@name = params[:name]
-    @email = params[:email]
+  	@name    = params[:name]
+    @email   = params[:email]
     @message = params[:message]
-    render json: { message: "success!" }
+    render json: { message: "Deine Nachricht wurde erfolgreich übermittelt. Vielen Dank!", status: "success" }
     UserMailer.contact_form(@email, @name, @message).deliver_now
   end
 
