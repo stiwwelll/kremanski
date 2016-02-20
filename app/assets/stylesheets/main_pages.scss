@@ -131,6 +131,11 @@
 	margin-top: 30px;
 }
 
+.loeffel-links-partner,
+.loeffel-rechts-partner {
+	display: none;
+}
+
 .loeffel-links-partner {
 	left: -10%;
 }
@@ -282,6 +287,15 @@ ul {
 
 	.oeffnung {
 		font-size: 1.3em;
+	}
+
+	.loeffel-links-partner,
+	.loeffel-rechts-partner {
+		display: block;
+	}
+
+	.swipe-icon {
+		display: none;
 	}
 
 }
