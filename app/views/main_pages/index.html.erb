@@ -53,7 +53,17 @@
         <%= image_tag("Eiskugel_frei_kl.png", class: "eiskugel center-block img-responsive") %>
       </div>
       <div class="col-xs-8 col-xs-offset-2 col-sm-10 col-sm-offset-2 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 ">
-        <%= image_tag("Rahmen_Menu.png", class: "menue img-responsive") %>
+        <!-- Button trigger modal -->
+        <%= image_submit_tag("Rahmen_Menu.png", data: { toggle: "modal", target: "#myModal" }, alt: "Submit", border: "0", class: "menue img-responsive") %>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="center-block">
+              <iframe src="https://docs.google.com/presentation/d/18QppQYCoLJjukVmR7uPYUMAl9avTi9BViwp1a2Lww5E/embed?start=false&loop=false&delayms=60000" width="100%" height="500px"></iframe>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

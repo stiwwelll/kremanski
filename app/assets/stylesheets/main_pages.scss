@@ -20,7 +20,6 @@
 	padding-top: 70px;
 }
 
-
 .carousel-inner {
 	margin-top: 50px;
 }
@@ -36,6 +35,11 @@
 .loeffel-icon {
 	position: absolute;
 	top: 50%;
+}
+
+.loeffel-links,
+.loeffel-rechts {
+	display: none;
 }
 
 .loeffel-links {
@@ -88,6 +92,15 @@
 
 .menue {
 	margin-top: 30px;
+}
+
+.modal-dialog {
+	width: 100%;
+}
+
+iframe {
+	position: relative;
+	margin: 0 auto;
 }
 
 .menue-row > h3 {
@@ -265,18 +278,9 @@ ul {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
-	.break2 {
-		content: " * ";
-	}
-
-	.break2:after {
-		content: " * ";
-	}
-
-	.break4 {
-		content: " * ";
-	}
-
+	.break2,
+	.break2:after,
+	.break4,
 	.break4:after {
 		content: " * ";
 	}
@@ -288,7 +292,9 @@ ul {
 	.oeffnung {
 		font-size: 1.3em;
 	}
-
+	
+	.loeffel-links,
+	.loeffel-rechts,
 	.loeffel-links-partner,
 	.loeffel-rechts-partner {
 		display: block;
