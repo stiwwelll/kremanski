@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	
+
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,41 +19,65 @@
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">
-						<%= image_tag("Kremanski_Logo_226px.png") %>
-					</a>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      		<ul class="nav navbar-nav">
-		        <li class="active"><a href="#about">About <span class="sr-only">(current)</span></a></li>
-						<li><a href="#events">Events</a></li>
-						<li><a href="#partner">Partners</a></li>
-						<li><a href="#gallery">Gallery</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-					<div class="social-buttons">
-						<a class="facebook-icon" href="https://www.facebook.com/kremanski/" target="_blank">
-						<%= image_tag("Icon_FB_30x30.png", class: "facebook") %>
-						</a>
-						<a class="maps-icon" href="#">
-							<%= image_tag("Icon_Maps_30x30.png", class: "maps") %>
-						</a>
-						<a class="instagram-icon" href="#">
-							<%= image_tag("Icon_Instagram_30x30.png", class: "instagram") %>
+				<div class="container">	
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">
+							<%= image_tag("Kremanski_Logo_226px.png") %>
 						</a>
 					</div>
-				</div><!-- /.navbar-collapse -->
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      		<ul class="nav navbar-nav navbar-right">
+			        <li class="active"><a href="#about">About <span class="sr-only">(current)</span></a></li>
+							<li><a href="#events">Events</a></li>
+							<li><a href="#partner" class="partner-nav">Partners &amp; Products</a></li>
+							<li><a href="#gallery">Gallery</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div>
 			</div><!-- /.container-fluid -->
 		</nav>
 	<%= yield %>
+	<div class="container-fluid impressum-container" id="impressum-container">
+		<div class="container">
+			<div class="row center-block">
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+					<ul>
+						<li>KREMANSKI</li>
+						<li>Adalbertstrasse 96</li>
+						<li>10999 Berlin</li>
+						<br/>
+						<li><a href="http://www.kremanski.de">www.kremanski.de</a></li>
+						<li><a href="mailto:mail@kremanski.de">mail@kremanski.de</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-5 col-lg-5">
+					<ul>
+						<li>Inhaber und Geschäftsführer: Andreas Bembenek</li>
+						<li>U-St-Nr 114/224/01607</li>
+						<br/>
+						<li><strong>Haftungshinweis:</strong><br/>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</li>
+					</ul>
+				</div>‚
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<ul>
+						<li><strong>Design und Programmierung</strong></li>
+						<br/>
+						<li>Camilla Hoffmann   <%= link_to "www.camilla.de", "http://www.camilla.de/", target: "_blank" %></li>
+						<li>Cosima Kaibel</li>
+						<li>Marco Steffensky   <%= link_to "www.marcosteffensky.de", "http://www.marcosteffensky.de/", target: "_blank" %></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	</main>
 	<script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLRwunMi2LxFy5bF8-XaOK7CFoZhOleg&callback=initMap">
