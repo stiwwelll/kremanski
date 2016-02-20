@@ -6,12 +6,16 @@
 	padding-top: 40px;
 }
 
+#partner.anchor{
+	padding-top: 90px;
+}
+
+
 #events.anchor,
 #gallery.anchor {
 	padding-top: 80px;
 }
 
-#partner.anchor,
 #contact.anchor {
 	padding-top: 70px;
 }
@@ -50,7 +54,7 @@
 	text-align: center;
 	margin-top: 60px;
 	margin-bottom: 50px;
-	font-size: 150%;
+	font-size: 1.1em;
 	text-transform: uppercase;
 	width: 70%;
 }
@@ -69,6 +73,7 @@
 
 .about > h2 {
 	text-align: center;
+	font-size: 1.4em;
 }
 
 .about > p {
@@ -255,6 +260,29 @@ ul {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
+	.break2 {
+		content: " * ";
+	}
+
+	.break2:after {
+		content: " * ";
+	}
+
+	.break4 {
+		content: " * ";
+	}
+
+	.break4:after {
+		content: " * ";
+	}
+
+	.event-highlights h1 {
+		text-align: left;
+	}
+
+	.oeffnung {
+		font-size: 1.3em;
+	}
 
 }
 
