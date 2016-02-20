@@ -53,16 +53,18 @@ $(function() {
     $('#contact-form-submit').on('click', function () {
       $(this).prop('disabled', true);
 
-      $.ajax({
+      var request = $.ajax({
         url: "main_pages/contact_form",
         data: params,
         method: "POST"
-      }).done(function(response) {
+      });
+
+      request.done(function(response) {
         $.notify({
           // options
-          icon: 'fa fa-coffee',
-          message: response.message
-          },{
+            icon: 'fa fa-coffee',
+            message: response.message
+            },{
           // settings
             type: response.status,
             placement: {
@@ -73,6 +75,26 @@ $(function() {
       });
     });
   });
+
+  $( ".impressum" ).click(function() {
+    $( "#impressum-container" ).fadeToggle( "slow", "linear");
+  });
+
+  $(".carousel-inner").swipe( {
+            //Generic swipe handler for all directions
+            swipeLeft:function(event, direction, distance, duration, fingerCount) {
+              $(this).parent().carousel('prev');
+            },
+            swipeRight: function() {
+              $(this).parent().carousel('next');
+            },
+            //Default is 75px, set to 0 for demo so any distance triggers swipe
+            threshold:0
+          });
 });
+
+
+
+
 
 
