@@ -21,13 +21,13 @@
 </div>
 
 <!-- Oeffnungszeiten -->
-<p class="oeffnung center-block">&Ouml;ffnungszeiten: Mo.-Do. 8:30 – 23:30 Uhr * Fr: 8:30 – 2:00 UHR * Sa: 12–2:00 Uhr * S0: 12–23 Uhr</p>
+<p class="oeffnung center-block">&Ouml;ffnungszeiten:<br class="break1"> Mo.-Do. 8:30 – 23:30 Uhr<br class="break2">Fr: 8:30 – 2:00 UHR<br class="break3">Sa: 12–2:00 Uhr<br class="break4"> S0: 12–23 Uhr</p>
 
 <!-- Loeffelpfeil und Waffelteller -->
 <div class="container">
   <div class="row">
     <div class="col-xs-3 col-xs-offset-3 col-md-2 col-md-offset-5 col-lg-2 col-lg-offset-5">
-      <%= image_tag("Loeffelpfeil_3.png", class: "loeffelpfeil3 center-block img-responsive") %>
+      <%= link_to image_tag("Loeffelpfeil_3.png", class: "loeffelpfeil3 center-block img-responsive"),"#events" %>
     </div>
     <div class="col-xs-5 col-md-3 col-md-offset-1 col-lg-4 col-lg-offset-1">
       <%= image_tag("Waffel_frei_kl.png", class: "waffel img-responsive") %>
@@ -52,7 +52,7 @@
       <div class="col-xs-6 col-xs-offset-3 col-sm-5 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-3 col-lg-offset-5">
         <%= image_tag("Eiskugel_frei_kl.png", class: "eiskugel center-block img-responsive") %>
       </div>
-      <div class="col-xs-8 col-xs-offset-2 col-sm-10 col-sm-offset-3 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 ">
+      <div class="col-xs-8 col-xs-offset-2 col-sm-10 col-sm-offset-2 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 ">
         <%= image_tag("Rahmen_Menu.png", class: "menue img-responsive") %>
       </div>
     </div>
@@ -186,9 +186,8 @@
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         <%= image_tag("Circle_Call_Us.png", class: "center-block img-responsive call-us") %>
       </div>
-      <%= form_tag main_pages_contact_form_path do %>
+      <%= form_tag main_pages_contact_form_path, id: "contact_form" do %>
         <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-7 col-lg-7 form">
-          <%= flash[:notice] %>
           <%= image_tag("Headline_Kontakt.png", class: "center-block img-responsive kontaktueberschrift") %>
           <div class="form-group">
             <div class="row name">
@@ -207,7 +206,7 @@
               </div>
               <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
                 <%= text_field_tag :email, nil, class: "textfeld"  %>
-              </div>
+              </div> 
             </div>
           </div>
           <div class="form-group">
@@ -237,7 +236,8 @@
       <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
         <address><strong>LOCATED:</strong> Adalbertraße 96, 10999 Berlin</address>
         <div id="map"></div>
+        <a class="impressum" href="#impressum-container">Impressum</a>
       </div>
-    </div>   
+    </div>
   </div>
 </div>
