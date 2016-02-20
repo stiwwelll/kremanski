@@ -45,6 +45,10 @@ li {
 	list-style-type: none;
 }
 
+.container-fluid {
+	padding: 0;
+}
+
 .navbar-default {
 	position: fixed;
 	width: 100%;
@@ -63,10 +67,12 @@ li {
 .navbar-toggle.collapsed {
 	position: relative;
 	top: 15px;
+	right: 15px;
 }
 
 .navbar-brand {
 	margin-top: 6px;
+	margin-left: 15px;
 	height: 100%
 }
 
@@ -87,6 +93,13 @@ li {
 	background-color: transparent;
 	font-size: 1.1em;
 	padding-top: 12px;
+}
+
+.navbar-collapse.collapse,
+.navbar-collapse.collapsing,
+.navbar-collapse.collapse.in {
+	margin: 0;
+	padding-bottom: 30px;
 }
 
 #bs-example-navbar-collapse-1 {
@@ -166,6 +179,14 @@ li {
 	top: 30px;
 	}
 
+	.navbar > .container-fluid .navbar-brand {
+		margin-left: 15px;
+	}
+
+	.navbar-right {
+		margin-right: 15px;
+		margin-left: 0;
+	}
 
 }
 
