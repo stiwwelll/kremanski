@@ -21,6 +21,7 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
+	font-size: 1em;
 }
 
 body {
@@ -69,7 +70,7 @@ li {
 	height: 100%
 }
 
-.navbar ul {
+.navbar-nav {
 	position: relative;
 	top: 18px;
 	margin-left: 40px;
@@ -77,6 +78,7 @@ li {
 
 .navbar li {
 	margin-right: 5px;
+	text-align: right;
 }
 
 .navbar-default .navbar-nav>.active>a, 
@@ -89,34 +91,40 @@ li {
 
 #bs-example-navbar-collapse-1 {
 	border: none;
+	width: 100%;
 	background-color: #fff;
 	opacity: 0.9;
 	filter: alpha(opacity=90); /* For IE8 and earlier */
 }
 
-.social-buttons {
-	position: relative;
-	float: right;
-	top: -22px;
+.impressum {
+	float:right;
+	font-size: 0.9em;
+	color: #4D4946;
+	margin-top: 50px;
+	text-transform: uppercase;
 }
 
-.social-buttons a:hover {
+.impressum:hover,
+.impressum-container a:hover {
+	color: #000;
 	text-decoration: none;
 }
 
-.facebook {
-	margin-right: 7px;
-	width: 23%;
+.impressum-container {
+	display: none;
+	font-size: 0.9em;
+	background-color: #fff;
+	opacity: 0.6;
+	filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
-.maps {
-	margin-right: 7px;
-	width: 23%;
+.impressum-container a {
+	color: #4D4946;
 }
 
-.instagram {
-	margin-right: 7px;
-	width: 23%;
+.impressum-container .row {
+	margin: 50px 0;
 }
 
 /* Extra small devices (phones, less than 768px) */
@@ -129,23 +137,18 @@ li {
 		background-color: transparent;
 	}
 
+	.navbar li {
+		text-align: center;
+	}
+
 	.navbar li a {
 		font-size: 0.8em;
 		padding: 0;
-		width: 100px;
+		width: 60px;
 	}
 
-	.navbar li {
-		margin: 0;
-	}
-
-	.navbar ul {
-		position: relative;
-		top: 15px;
-		right: -1%;
-		margin-left: 0;
-		float: right;
-		width: 70%;
+	.navbar .partner-nav {
+		width: 140px;
 	}
 
 	.navbar-default .navbar-nav>.active>a, 
@@ -158,38 +161,30 @@ li {
 		top: -2px;
 	}
 
-	.social-buttons {
-		top: 21px;
-		right: 14%;
-		width: 13%;
+	.navbar-nav {
+	position: relative;
+	top: 30px;
 	}
+
 
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-	.navbar-default {
-		font-size: 1.2em;
+
+	.navbar li a {
+		font-size: 0.8em;
+		padding: 0;
+		width: 80px;
 	}
 
-	.navbar ul {
-		top: 0;
-	}
-
-	.social-buttons {
-		top: 2px;
-	}
-
-	.social-buttons img{
-		width: 20%;
+	.navbar .partner-nav {
+		width: 160px;
 	}
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-	.navbar ul {
-		top: 30px;
-		width: 75%;
-	}
+
 }
 
