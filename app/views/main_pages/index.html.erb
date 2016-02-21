@@ -206,7 +206,7 @@
                 <%= label_tag :name, "Name:", class: "label" %>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 ">
-                <%= text_field_tag :name, nil, class: "textfeld" %>
+                <%= text_field_tag :name, nil, class: "textfeld", required: true %>
               </div>
             </div>
           </div>
@@ -216,7 +216,7 @@
                 <%= label_tag :email, "E-mail:", class: "label" %>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                <%= text_field_tag :email, nil, class: "textfeld"  %>
+                <%= text_field_tag :email, nil, class: "textfeld", required: true %>
               </div> 
             </div>
           </div>
@@ -226,7 +226,7 @@
                 <%= label_tag :message, "Nachricht:", class: "label" %>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                <%= text_area_tag :message, nil, class: "textarea"  %>
+                <%= text_area_tag :message, nil, class: "textarea", required: true  %>
               </div>
             </div>
           </div>
