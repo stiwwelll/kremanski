@@ -15,6 +15,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require lightbox
+//= require jquery.validate
+//= require jquery.validate.additional-methods
 //= require_tree .
 
 var map;
@@ -44,13 +46,28 @@ $(function() {
         return false;
     });
 
-  $("#contact-form-submit").on("click", function(event) {
-    var params;
-    event.preventDefault();
-    
-    params = { name: $("#name").val(), email: $("#email").val(), message: $("#message").val() };
+  $("#contact_form").validate({
 
-    $('#contact-form-submit').on('click', function () {
+    messages: {
+      name: "Bitte sag uns wer du bist",
+      email: {
+        required: "Wir brauchen deine E-Mail Adresse um dir antworten zu können",
+        email: "Deine E-Mail muss folgendem Format entsprechen: name@domain.com"
+      }
+    },
+
+    rules: {
+      email: {
+        email: true
+      }
+    },
+
+    submitHandler: function(form) {
+
+      var params;
+    
+      params = { name: $("#name").val(), email: $("#email").val(), message: $("#message").val() };
+
       $(this).prop('disabled', true);
 
       var request = $.ajax({
@@ -70,10 +87,10 @@ $(function() {
             placement: {
               from: "bottom",
               align: "left"
-            },
-        });
+            }
+          });
       });
-    });
+    }
   });
 
   $( ".impressum" ).click(function() {
