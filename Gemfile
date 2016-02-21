@@ -18,6 +18,7 @@ gem 'paperclip', '~> 4.3'
 gem 'aws-s3'
 gem 'aws-sdk-v1'
 gem 'aws-sdk', '~> 2'
+gem 'jquery-validation-rails'
 
 
 group :development, :test do
