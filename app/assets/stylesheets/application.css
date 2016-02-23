@@ -87,6 +87,18 @@ li {
 	text-align: right;
 }
 
+.navbar li a:hover {
+	opacity: 0.8;
+	filter: alpha(opacity=80); /* For IE8 and earlier */
+	-webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+
+
 .navbar-default .navbar-nav>.active>a, 
 .navbar-default .navbar-nav>.active>a:focus, 
 .navbar-default .navbar-nav>.active>a:hover {

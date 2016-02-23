@@ -42,16 +42,13 @@
 	display: none;
 }
 
-.loeffel-links {
-	left: 50%;
-}
-
-.loeffel-rechts {
-	right: 50%;
-}
-
 .carousel-container {
 	margin-top: 50px;
+}
+
+.swipe-icon-header {
+	margin-top: 30px;
+	margin-bottom: -30px;
 }
 
 .oeffnung {
@@ -240,35 +237,21 @@ textarea:focus {
 }
 
 .links-map {
-	margin-top: 30px;
+	margin-top: 50px;
 }
 
-.social-links {
-	position: relative;
-	text-align: center;
-	line-height: 4em;
-	margin-left: 0;
-	margin-bottom: 30px;
+.social {
+	margin-bottom: 50px;
 }
 
-ul {
-	padding: 0;
-}
-
-
-.find-us-link {
-	text-transform: uppercase;
-	text-decoration: none;
-	font-size: 1.4em;
-	color: #000;
-}
-
-.find-us-link:hover {
-	color: #000;
-	border-bottom: 5px solid transparent;
-	border-image: url("Linie_Punkt.png") 8 repeat;
-	text-decoration: none;
-	border-top: 0;
+.icon-link:hover {
+	opacity: 0.8;
+	filter: alpha(opacity=80); /* For IE8 and earlier */
+	-webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 #map {
@@ -296,18 +279,11 @@ ul {
 	.oeffnung {
 		font-size: 1.3em;
 	}
-	
-	.loeffel-links,
-	.loeffel-rechts,
-	.loeffel-links-partner,
-	.loeffel-rechts-partner {
-		display: block;
-	}
 
-	.swipe-icon {
+	.swipe-icon-header,
+	.swipe-icon-partner {
 		display: none;
 	}
-
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -332,12 +308,40 @@ ul {
 	.event-highlights h1 {
 		font-size: 2.5em;
 	}
+	
+	.social {
+		position: relative;
+		top: 3.4em;
+		margin-bottom: 0;
+	}
+
+	.social-icon {
+		margin: 15px 0;
+	}
+
+	.loeffel-links,
+	.loeffel-rechts,
+	.loeffel-links-partner,
+	.loeffel-rechts-partner {
+		display: block;
+	}
+
+  .loeffel-links {
+		left: -5%;
+	}
+
+	.loeffel-rechts {
+		right: -5%;
+	}	
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-	.vertical-list {
-		display: block;
-		width: 100px;
+	.loeffel-links {
+		left: 50%;
+	}
+
+	.loeffel-rechts {
+		right: 50%;
 	}
 }
