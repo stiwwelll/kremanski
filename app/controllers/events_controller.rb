@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all.order("date DESC")
+    @event_months = @events.group_by { |e| e.date.beginning_of_month }
   end
 
   # GET /events/1

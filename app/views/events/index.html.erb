@@ -1,11 +1,39 @@
-<div class="container event-list">
+<div class="container events">
   <h1>Events</h1>
-  <div class="row">
-      <%= render @events %>
-  </div>
+
   <div class="row">
 	  <div class="col-xs-12 neues-event">
-	      <%= link_to 'Neues Event erstellen', new_event_path, :class => "btn btn-default center-block" %>
+	      <%= link_to 'Neues Event erstellen', new_event_path, class: "btn btn-default center-block" %>
 	  </div>
   </div>
+
+	<div class="row">
+ 	<% @event_months.each do |month, events| %>
+		<h2 class="event-month"><%= month.strftime('%B %Y') %></h2>
+		<% for event in events %>
+			<div class="event-row">
+	  		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 event-name">
+	    		<%= event.name %>
+	  		</div>
+	    	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 event-date">
+	    		<%= format_date(event.date) %>
+	  		</div>
+	  		<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 event-description">
+	    		<%= event.description %>
+	      </div>
+      	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+    			<%= link_to "Zum Event Flyer", event.image.url(:medium), class: "event-flyer" %>
+    			<div class="event-admin">
+	        	<%= link_to edit_event_path(event), class: "event-button" do %>
+	        		<span class="glyphicon glyphicon-pencil"></span>
+	        	<% end %>
+	        	<%= link_to event, method: :delete, data: { confirm: 'Are you sure?'}, class: "event-button" do %>
+	        		<span class="glyphicon glyphicon-trash"></span>
+	        	<% end %>
+	      	</div>
+  			</div>
+	  	</div>
+		<% end %>
+	<% end %>
+	</div>
 </div>

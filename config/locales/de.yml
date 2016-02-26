@@ -1,0 +1,5 @@
+de:
+  date:
+    formats:
+      short: "%B %Y"
+      default: "%D %m, %Y"
