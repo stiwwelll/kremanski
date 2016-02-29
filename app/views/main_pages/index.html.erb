@@ -1,3 +1,29 @@
+<!-- Navigation -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <%= image_tag("Kremanski_Logo_226px.png") %>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#about">About <span class="sr-only">(current)</span></a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#partner" class="partner-nav">Partners &amp; Products</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <!-- News Carousel -->
 <div class="container carousel-container">
   <div id="carousel-example-generic-1" class="carousel slide" data-ride="carousel">
@@ -84,7 +110,6 @@
   </div>
 </div>
 
-
 <!-- Events -->
 <div id="events" class="anchor">
   <div class="container menue-row">
@@ -93,7 +118,7 @@
         <h3>Upcoming Events:</h3>
       </div>
       <div class="col-xs-6 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-5 col-lg-3 col-lg-offset-5">
-        <%= image_tag("But_Event_Archive.png", class: "archive img-responsive") %>
+        <%= link_to image_tag("But_Event_Archive.png", class: "archive img-responsive"), events_path %>
       </div>
     </div>
   <% @events.each do |event| %>
