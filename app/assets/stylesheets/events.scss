@@ -12,11 +12,12 @@ h1 {
 
 .neues-event > .btn-default {
 	float: none;
-	width: 50%;
+	width: 60%;
 }
 
 .events {
 	margin-top: 80px;
+	font-size: 0.8em;
 }
 
 .event-row {
@@ -24,13 +25,17 @@ h1 {
 	margin-top: 30px;
 }
 
-.event-name {
-	padding-left: 0;
+.event-month {
+	padding-left: 15px;
 }
 
 .event-admin {
 	margin-top: 10px;
 	margin-bottom: 50px;
+}
+
+.event-description {
+	margin: 10px 0;
 }
 
 .event-button,
@@ -50,4 +55,20 @@ h1 {
   -ms-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2 linear;
+}
+
+@media (min-width: 768px) {
+	.event-description {
+		margin: 0;
+	}
+}
+
+@media (min-width: 992px) {
+	.events {
+		font-size: 1em;
+	}
+
+	.neues-event > .btn-default {
+		width: 50%;
+	}
 }
