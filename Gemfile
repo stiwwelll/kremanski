@@ -13,7 +13,7 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 gem 'figaro'
 gem 'mailgun_rails'
-gem 'friendly_id'
+gem 'friendly_id', '~> 5.1.0'
 gem 'lightbox2-rails'
 gem 'quiet_assets'
 gem 'paperclip', '~> 4.3'
@@ -27,6 +27,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-core'
   gem 'factory_girl_rails'
   gem 'sqlite3'
 end

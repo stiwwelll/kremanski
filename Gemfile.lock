@@ -281,7 +281,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   figaro
-  friendly_id
+  friendly_id (~> 5.1.0)
   jbuilder (~> 2.0)
   jquery-rails
   jquery-validation-rails
@@ -293,6 +293,7 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.2.4)
   rails_12factor
+  rspec-core
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
