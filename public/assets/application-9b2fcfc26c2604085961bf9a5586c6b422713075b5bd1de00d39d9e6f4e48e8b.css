@@ -1,0 +1,1025 @@
+/* Preload images */
+
+body:after {
+  content: url(/assets/lightbox/close-5d62e6c90005bfb71f6abb440f9e4753681cb23bbd5e60477ab6f442d2f0e69c.png) url(/assets/lightbox/loading-225aa88b6ab02c06222ec9468d62e15fa188e39cdb9431d1f55401ad380753ed.gif) url(/assets/lightbox/prev-7fd9273f20fdb1229c224341271a119020a5eee74ccf6b4605730917c864caf2.png) url(/assets/lightbox/next-15b869b02c6fbaa8c6c26445a2dd2d9bad80fd27b1409f8179e5dd89dc89d90a.png);
+  display: none;
+}
+
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none;
+}
+
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+}
+
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.lightbox a img {
+  border: none;
+}
+
+.lb-outerContainer {
+  position: relative;
+  background-color: white;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-container {
+  padding: 4px;
+}
+
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(/assets/lightbox/loading-225aa88b6ab02c06222ec9468d62e15fa188e39cdb9431d1f55401ad380753ed.gif) no-repeat;
+}
+
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.lb-container > .nav {
+  left: 0;
+}
+
+.lb-nav a {
+  outline: none;
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+}
+
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(/assets/lightbox/prev-7fd9273f20fdb1229c224341271a119020a5eee74ccf6b4605730917c864caf2.png) left 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(/assets/lightbox/next-15b869b02c6fbaa8c6c26445a2dd2d9bad80fd27b1409f8179e5dd89dc89d90a.png) right 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-data {
+  padding: 0 4px;
+  color: #ccc;
+}
+
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 12px;
+  color: #999999;
+}
+
+.lb-data .lb-close {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(/assets/lightbox/close-5d62e6c90005bfb71f6abb440f9e4753681cb23bbd5e60477ab6f442d2f0e69c.png) top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 5, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+.glyphicon-ban-circle:hover {
+  color: red;
+}
+
+/* line 9, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+h1 {
+  text-align: center;
+}
+
+/* line 13, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+.neues-event {
+  margin: 20px 0;
+}
+
+/* line 17, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+.neues-event > .btn-default {
+  float: none;
+  width: 60%;
+}
+
+/* line 22, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+.events {
+  margin-top: 80px;
+  font-size: 0.8em;
+}
+
+/* line 27, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+.event-row {
+  height: 100%;
+  margin-top: 30px;
+}
+
+/* line 32, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+.event-month {
+  padding-left: 15px;
+}
+
+/* line 36, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+.event-admin {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+/* line 41, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+.event-description {
+  margin: 10px 0;
+}
+
+/* line 45, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+.event-button,
+.event-flyer {
+  color: #4D4946;
+  padding-left: 0;
+}
+
+/* line 51, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+.event-button:hover,
+.event-flyer:hover {
+  color: #4D4946;
+  text-decoration: none;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  /* For IE8 and earlier */
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2 linear;
+}
+
+/* event new/edit page */
+/* line 66, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+.field {
+  margin-bottom: 30px;
+}
+
+/* line 70, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+.file-field {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  /* line 77, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+  .event-description {
+    margin: 0;
+  }
+}
+@media (min-width: 992px) {
+  /* line 83, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+  .events {
+    font-size: 1em;
+  }
+
+  /* line 87, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/events.scss */
+  .neues-event > .btn-default {
+    width: 50%;
+  }
+}
+/* line 5, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.container-fluid {
+  padding: 0;
+}
+
+/* line 9, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+#about.anchor {
+  padding-top: 40px;
+}
+
+/* line 13, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+#partner.anchor {
+  padding-top: 90px;
+}
+
+/* line 18, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+#events.anchor,
+#gallery.anchor {
+  padding-top: 80px;
+}
+
+/* line 23, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+#contact.anchor {
+  padding-top: 70px;
+}
+
+/* line 27, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.carousel-inner {
+  margin-top: 50px;
+}
+
+/* line 31, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.carousel-control.right {
+  background-image: none;
+}
+
+/* line 35, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.carousel-control.left {
+  background-image: none;
+}
+
+/* line 39, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.loeffel-icon {
+  position: absolute;
+  top: 50%;
+}
+
+/* line 44, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.loeffel-links,
+.loeffel-rechts {
+  display: none;
+}
+
+/* line 49, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.carousel-container {
+  margin-top: 50px;
+}
+
+/* line 53, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.swipe-icon-header {
+  margin-top: 30px;
+  margin-bottom: -30px;
+}
+
+/* line 58, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.oeffnung {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  width: 70%;
+}
+
+/* line 67, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.loeffelpfeil3 {
+  padding-top: 50px;
+}
+
+/* line 71, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.about {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  margin-top: 50px;
+}
+
+/* line 79, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.about > h2 {
+  text-align: center;
+  font-size: 1.4em;
+}
+
+/* line 84, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.about > p {
+  margin-top: 30px;
+  font-size: 0.9em;
+  text-align: justify;
+}
+
+/* line 90, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.menue-row {
+  margin-top: 20px;
+}
+
+/* line 94, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.menue {
+  margin-top: 30px;
+}
+
+/* line 98, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.modal-dialog {
+  width: 100%;
+}
+
+/* line 102, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+iframe {
+  position: relative;
+  margin: 0 auto;
+}
+
+/* line 107, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.menue-row > h3 {
+  margin-top: 0;
+}
+
+/* line 111, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.archive {
+  padding-top: 8px;
+}
+
+/* line 115, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.event-highlights {
+  margin-top: 50px;
+}
+
+/* line 119, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.event-linie {
+  padding: 20px 0;
+}
+
+/* line 123, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.event-cta {
+  padding: 0 15px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+/* line 130, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.loeffelpfeil2 {
+  margin-top: 50px;
+}
+
+/* line 134, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.ownevent {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 70px;
+}
+
+/* line 140, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.cocktail {
+  width: 100%;
+}
+
+/* line 144, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.glas {
+  margin-top: 30px;
+}
+
+/* line 148, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.loeffel-links-partner,
+.loeffel-rechts-partner {
+  display: none;
+}
+
+/* line 153, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.loeffel-links-partner {
+  left: -10%;
+}
+
+/* line 156, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.loeffel-rechts-partner {
+  right: -10%;
+}
+
+/* line 160, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.kaffee {
+  position: relative;
+  top: 30px;
+}
+
+/* line 165, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+#gallerie {
+  margin-top: 80px;
+}
+
+/* line 169, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+#kontakt {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+/* line 174, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.call-us {
+  position: relative;
+  top: 30px;
+}
+
+/* line 179, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+#contact {
+  margin-bottom: 50px;
+}
+
+/* line 183, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.col-xs-12 > .kontaktueberschrift,
+.col-sm-12 > .kontaktueberschrift {
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+/* line 189, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.name,
+.email {
+  margin-bottom: 30px;
+}
+
+/* line 195, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.textfeld,
+.textarea {
+  width: 100%;
+  border: 5px solid transparent;
+  border-image: url("Linie_Punkt.png") 20 repeat;
+  border-top: 0;
+}
+
+/* line 203, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.textfeld {
+  height: 40px;
+}
+
+/* line 207, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.textarea {
+  height: 80px;
+}
+
+/* line 211, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* line 217, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.label {
+  position: relative;
+  top: 10px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+/* line 225, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+#email-error {
+  color: red;
+}
+
+/* line 229, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.col-xs-12 > .label,
+.col-sm-12 > .label {
+  top: -5px;
+}
+
+/* line 234, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.btn-default {
+  float: right;
+}
+
+/* line 238, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.find-us {
+  position: relative;
+  top: 10%;
+}
+
+/* line 243, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.links-map {
+  margin-top: 50px;
+}
+
+/* line 247, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.social {
+  margin-bottom: 50px;
+}
+
+/* line 251, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.icon-link:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  /* For IE8 and earlier */
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+/* line 261, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+#map {
+  height: 250px;
+  width: 100%;
+}
+
+/* line 267, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.impressum {
+  float: right;
+  font-size: 0.9em;
+  color: #4D4946;
+  margin-top: 50px;
+  text-transform: uppercase;
+}
+
+/* line 275, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.impressum:hover,
+.impressum-container a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 281, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.impressum-container {
+  display: none;
+  font-size: 0.9em;
+  background-color: #fff;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  /* For IE8 and earlier */
+}
+
+/* line 289, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.impressum-container a {
+  color: #4D4946;
+}
+
+/* line 293, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+.impressum-container .row {
+  margin: 50px 0;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* line 303, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .break2,
+  .break2:after,
+  .break4,
+  .break4:after {
+    content: " * ";
+  }
+
+  /* line 310, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .event-highlights h1 {
+    text-align: left;
+  }
+
+  /* line 314, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .oeffnung {
+    font-size: 1.3em;
+  }
+
+  /* line 318, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .swipe-icon-header,
+  .swipe-icon-partner {
+    display: none;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* line 326, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  address {
+    padding-top: 15px;
+    font-size: 1.2em;
+  }
+
+  /* line 331, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .menue-row h3 {
+    padding-top: 20px;
+  }
+
+  /* line 335, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .archive {
+    padding-top: 0;
+  }
+
+  /* line 339, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .event-highlights {
+    margin: 50px 0;
+  }
+
+  /* line 343, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .event-highlights h1 {
+    font-size: 2.5em;
+  }
+
+  /* line 347, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .social {
+    position: relative;
+    top: 3.4em;
+    margin-bottom: 0;
+  }
+
+  /* line 353, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .social-icon {
+    margin: 15px 0;
+  }
+
+  /* line 357, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .loeffel-links,
+  .loeffel-rechts,
+  .loeffel-links-partner,
+  .loeffel-rechts-partner {
+    display: block;
+  }
+
+  /* line 364, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .loeffel-links {
+    left: -5%;
+  }
+
+  /* line 368, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .loeffel-rechts {
+    right: -5%;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* line 375, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .loeffel-links {
+    left: 50%;
+  }
+
+  /* line 379, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/main_pages.scss */
+  .loeffel-rechts {
+    right: 50%;
+  }
+}
+/* line 1, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /Users/Marco/Desktop/kremanski/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
+
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-size: 1em;
+}
+
+body {
+	font-family: 'Futura', Arial, sans-serif;
+	color: #4D4946;
+	background-image: url("BG_Wand_Kachel.jpg");
+	background-size: 100%;
+	background-repeat: repeat-y;
+	position: relative;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h3 {
+	margin-top: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+.navbar-default {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	border: none;
+	top: 7px;
+	height: 80px;
+	background-color: #fff;
+	opacity: 0.9;
+	filter: alpha(opacity=90); /* For IE8 and earlier */
+}
+
+.navbar-toggle,
+.navbar-toggle.collapsed {
+	position: relative;
+	top: 15px;
+	right: 15px;
+}
+
+.navbar-brand {
+	margin-top: 6px;
+	margin-left: 15px;
+	height: 100%
+}
+
+.navbar-nav {
+	position: relative;
+	top: 18px;
+	margin-left: 40px;
+}
+
+.navbar li {
+	margin-right: 5px;
+	text-align: right;
+}
+
+.navbar li a:hover {
+	opacity: 0.8;
+	filter: alpha(opacity=80); /* For IE8 and earlier */
+	-webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+
+
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+	font-size: 1.1em;
+	padding-top: 12px;
+}
+
+.navbar-collapse.collapse,
+.navbar-collapse.collapsing,
+.navbar-collapse.collapse.in {
+	margin: 0;
+	padding-bottom: 30px;
+}
+
+#bs-example-navbar-collapse-1 {
+	border: none;
+	width: 100%;
+	background-color: #fff;
+	opacity: 0.9;
+	filter: alpha(opacity=90); /* For IE8 and earlier */
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+	#bs-example-navbar-collapse-1 {
+		background-color: transparent;
+	}
+
+	.navbar li {
+		text-align: center;
+	}
+
+	.navbar li a {
+		font-size: 0.8em;
+		padding: 0;
+		width: 60px;
+	}
+
+	.navbar .partner-nav {
+		width: 140px;
+	}
+
+	.navbar-default .navbar-nav>.active>a, 
+	.navbar-default .navbar-nav>.active>a:focus, 
+	.navbar-default .navbar-nav>.active>a:hover {
+		background-color: transparent;
+		font-size: 0.9em;
+		padding-top: 0;
+		position: relative;
+		top: -2px;
+	}
+
+	.navbar-nav {
+	position: relative;
+	top: 30px;
+	}
+
+	.navbar > .container-fluid .navbar-brand {
+		margin-left: 15px;
+	}
+
+	.navbar-right {
+		margin-right: 15px;
+		margin-left: 0;
+	}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+	.navbar li a {
+		font-size: 0.8em;
+		padding: 0;
+		width: 80px;
+	}
+
+	.navbar .partner-nav {
+		width: 160px;
+	}
+}
