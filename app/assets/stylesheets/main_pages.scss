@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container-fluid {
-	padding: 0;
-}
-
 #about.anchor {
 	padding-top: 40px;
 }
@@ -13,7 +9,6 @@
 #partner.anchor{
 	padding-top: 90px;
 }
-
 
 #events.anchor,
 #gallery.anchor {
@@ -28,13 +23,15 @@
 	margin-top: 50px;
 }
 
-.carousel-control.right {
+.carousel-control.right,
+.carousel-control.left  {
 	background-image: none;
 }
 
-.carousel-control.left {
-	background-image: none;
+.carousel-control:hover {
+	background-color: transparent;
 }
+
 
 .loeffel-icon {
 	position: absolute;
@@ -276,6 +273,7 @@ textarea:focus {
 .impressum-container a:hover {
 	color: #000;
 	text-decoration: none;
+	background-color: transparent;
 }
 
 .impressum-container {

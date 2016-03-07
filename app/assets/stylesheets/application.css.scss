@@ -27,7 +27,7 @@ body {
 body {
 	font-family: 'Futura', Arial, sans-serif;
 	color: #4D4946;
-	background-image: url("BG_Wand_Kachel.jpg");
+	background: asset_url('BG_Wand_Kachel.jpg');
 	background-size: 100%;
 	background-repeat: repeat-y;
 	position: relative;
