@@ -1,10 +1,11 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all.order("date DESC")
+    @events = Event.future_dates.order("date")
     @event_months = @events.group_by { |e| e.date.beginning_of_month }
   end
 
@@ -65,7 +66,7 @@ class EventsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
-      @event = Event.find(params[:id])
+      @event = Event.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

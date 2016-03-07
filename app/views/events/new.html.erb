@@ -1,5 +1,45 @@
-<h1>New Event</h1>
+<h1>Neues Event</h1>
 
-<%= render 'form' %>
+<%= form_for(@event, multipart: true) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+      <ul>
+      <% @event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+    <div class="field">
+      <%= f.label :name, class: "form-label" %><br>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :date, class: "form-label" %><br>
+      <%= f.date_select :date, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :description, class: "form-label" %><br>
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
 
-<%= link_to 'Back', events_path %>
+    <%= f.file_field :image, class: "file-field" %>
+
+    <% if @event.new_record? %>
+      <%= image_tag @event.image.url(:default_url) %>
+    <% else %>
+      <%= image_tag @event.image.url(:medium) %>
+    <% end %> 
+
+    <div>
+      <%= f.submit "Event speichern", class: "btn btn-default" %>
+      <%= link_to events_path, class: "event-button" do %>
+        <span class="glyphicon glyphicon-step-backward"></span>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% end %>

@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.glyphicon-ban-circle:hover {
+	color: red;
+}
+
 h1 {
 	text-align: center;
 }
@@ -56,6 +60,18 @@ h1 {
   -o-transition: all 0.2s linear;
   transition: all 0.2 linear;
 }
+
+/* event new/edit page */
+
+.field {
+	margin-bottom: 30px;
+}
+
+.file-field {
+	margin-bottom: 20px;
+}
+
+
 
 @media (min-width: 768px) {
 	.event-description {

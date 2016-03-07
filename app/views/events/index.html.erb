@@ -8,13 +8,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">
-        <%= image_tag("Kremanski_Logo_226px.png") %>
-      </a>
+      <%= link_to image_tag("Kremanski_Logo_226px.png", class: "navbar-brand img-responsive"), main_pages_index_path %>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><%= link_to "Zurück", main_pages_index_path %></li>
+        <% if user_signed_in? %>
+   				<li>
+      			<%= link_to destroy_user_session_path, method: :delete do %>
+        		<span class="glyphicon glyphicon-ban-circle"></span>
+      			<% end %>
+			    </li>
+			  <% end %>
       </ul>
     </div>
   </div>
@@ -22,18 +27,19 @@
 
 <div class="container events">
   <h1>Events</h1>
-
-  <div class="row">
-	  <div class="col-xs-12 neues-event">
-	      <%= link_to 'Neues Event erstellen', new_event_path, class: "btn btn-default center-block" %>
+	<% if current_user && current_user.admin? %>
+	  <div class="row">
+		  <div class="col-xs-12 neues-event">
+		      <%= link_to 'Neues Event erstellen', new_event_path, class: "btn btn-default center-block" %>
+		  </div>
 	  </div>
-  </div>
+	<% end %>
 
-	<div class="row">
+	
  	<% @event_months.each do |month, events| %>
+ 	<div class="row">
 		<h2 class="event-month"><%= month.strftime('%B %Y') %></h2>
-		<% for event in events %>
-			<div class="event-row">
+			<% for event in events %>
 	  		<div class="col-xs-8 col-sm-3 col-md-3 col-lg-3 event-name">
 	    		<%= event.name %>
 	  		</div>
@@ -45,17 +51,19 @@
 	      </div>
       	<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
     			<%= link_to "Zum Event Flyer", event.image.url(:medium), class: "event-flyer" %>
-    			<div class="event-admin">
-	        	<%= link_to edit_event_path(event), class: "event-button" do %>
-	        		<span class="glyphicon glyphicon-pencil"></span>
-	        	<% end %>
-	        	<%= link_to event, method: :delete, data: { confirm: 'Are you sure?'}, class: "event-button" do %>
-	        		<span class="glyphicon glyphicon-trash"></span>
-	        	<% end %>
-	      	</div>
+    			<% if current_user && current_user.admin? %>
+	    			<div class="event-admin">
+		        	<%= link_to edit_event_path(event), class: "event-button" do %>
+		        		<span class="glyphicon glyphicon-pencil"></span>
+		        	<% end %>
+		        	<%= link_to event, method: :delete, data: { confirm: 'Are you sure?'}, class: "event-button" do %>
+		        		<span class="glyphicon glyphicon-trash"></span>
+		        	<% end %>
+		      	</div>
+	      	<% end %>
   			</div>
-	  	</div>
+			<% end %>
+			</div>
 		<% end %>
-	<% end %>
-	</div>
+	
 </div>
