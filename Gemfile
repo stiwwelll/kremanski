@@ -21,6 +21,7 @@ gem 'aws-s3'
 gem 'aws-sdk-v1'
 gem 'aws-sdk', '~> 2'
 gem 'jquery-validation-rails'
+gem 'pdfjs_rails'
 
 
 group :development, :test do

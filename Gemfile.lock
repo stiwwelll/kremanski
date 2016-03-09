@@ -153,6 +153,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    pdfjs_rails (0.0.1)
     pg (0.18.4)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
@@ -289,6 +290,7 @@ DEPENDENCIES
   lightbox2-rails
   mailgun_rails
   paperclip (~> 4.3)
+  pdfjs_rails
   pg
   quiet_assets
   rails (= 4.2.4)
