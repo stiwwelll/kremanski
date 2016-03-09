@@ -5,8 +5,8 @@
 #about.anchor {
 	padding-top: 40px;
 }
-
-#partner.anchor{
+#menue.anchor,
+#partner.anchor {
 	padding-top: 90px;
 }
 
@@ -141,6 +141,39 @@ iframe {
 .glas {
 	margin-top: 30px;
 }
+
+.menu_headline {
+	padding-bottom: 30px;
+}
+
+.menu-papers {
+	margin-top: 10px;
+}
+
+.modal-dialog {
+	width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+}
+
+.modal-content iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.partner-intro {
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 70px;
+} 
 
 .loeffel-links-partner,
 .loeffel-rechts-partner {
@@ -340,6 +373,12 @@ textarea:focus {
 
 	.event-highlights h1 {
 		font-size: 2.5em;
+	}
+
+	.coffee-paper,
+	.lunch-paper {
+		position: relative;
+		top: 20px;
 	}
 	
 	.social {

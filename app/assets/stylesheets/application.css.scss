@@ -17,6 +17,8 @@
 
 html,
 body {
+	font-family: 'Futura', Arial, sans-serif;
+	color: #4D4946;
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -25,8 +27,6 @@ body {
 }
 
 body {
-	font-family: 'Futura', Arial, sans-serif;
-	color: #4D4946;
 	background: asset_url('BG_Wand_Kachel.jpg');
 	background-size: 100%;
 	background-repeat: repeat-y;
@@ -43,6 +43,11 @@ h3 {
 
 li {
 	list-style-type: none;
+}
+
+p {
+	font-family: 'Futura', Arial, sans-serif;
+	color: #4D4946;
 }
 
 .container-fluid {
