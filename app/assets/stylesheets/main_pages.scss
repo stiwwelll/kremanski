@@ -226,7 +226,7 @@ iframe {
 .textarea {
 	width: 100%;
 	border: 5px solid transparent;
-	border-image: url("Linie_Punkt.png") 20 repeat;
+	border-image: asset_url("Linie_Punkt.png") 20 repeat;
 	border-top: 0;
 }
 
