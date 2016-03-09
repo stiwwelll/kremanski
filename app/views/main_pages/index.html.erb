@@ -14,6 +14,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="#about">About <span class="sr-only">(current)</span></a></li>
         <li><a href="#events">Events</a></li>
+        <li><a href="#menue">Menu</a></li>
         <li><a href="#partner" class="partner-nav">Partners &amp; Products</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -135,8 +136,6 @@
     <% end %>
   <% end %>
   </div>
-  
-
   <h1 class="center-block ownevent">Book <strong>Kremanski</strong> for your own event!</h1>
 </div>
 
@@ -146,6 +145,61 @@
       <%= image_tag("Cocktail_frei_kl.png", class: "center-block img-responsive glas") %>
     </div>
   </div>
+</div>
+
+<!-- Menü -->
+<div id="menue" class="anchor">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1">
+        <%= image_tag("Headline_Menu.png", class: "img-responsive menu_headline") %>
+        <p>... wenn uberhaupt ein großer Schritt fur uns. Lorem ip- sum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, na- scetur ridiculus mus. Donec quam felis, ultricies nec, pel- lentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-2">
+        <%= image_tag("Post_It_Menu.png", class: "center-block img-responsive") %>
+      </div>
+    </div>
+    <div class="row menu-papers">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <!-- Button trigger modal -->
+        <%= image_submit_tag("But_Papier_Coffee.png", data: { toggle: "modal", target: "#myModalCoffee" }, alt: "Submit", border: "0", class: "center-block img-responsive coffee-paper") %>
+        <!-- Modal -->
+        <div class="modal fade" id="myModalCoffee" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <iframe src="/pdfjs/web/viewer.html?file=/pdfjs/test.pdf" style="border: 0" frameborder="0" scrolling="no"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <%= image_submit_tag("But_Papier_Breakfast.png", data: { toggle: "modal", target: "#myModalBreakfast" }, alt: "Submit", border: "0", class: "center-block img-responsive breakfast-paper") %>
+        <!-- Modal -->
+        <div class="modal fade" id="myModalBreakfast" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <iframe src="/pdfjs/web/viewer.html?file=/pdfjs/test.pdf" style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <%= image_submit_tag("But_Papier_Lunch.png", data: { toggle: "modal", target: "#myModalLunch" }, alt: "Submit", border: "0", class: "center-block img-responsive lunch-paper") %>
+        <!-- Modal -->
+        <div class="modal fade" id="myModalLunch" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <iframe src="https://docs.google.com/presentation/d/18QppQYCoLJjukVmR7uPYUMAl9avTi9BViwp1a2Lww5E/embed?start=false&loop=false&delayms=60000" width="100%" height="100%"></iframe>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="center-block partner-intro">Find out more about our culinary partners...</h2>
 </div>
 
 <!-- Partner Carousel -->
