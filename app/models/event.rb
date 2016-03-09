@@ -6,7 +6,7 @@ class Event < ActiveRecord::Base
   require 'aws-sdk'
   has_attached_file :image, 
   									s3_protocol: :https,
-  									styles: { medium: "460x315>", thumb: "175x120>" }, default_url: "http://placehold.it/175x120"
+  									styles: { medium: "460x315>", thumb: "175x120>" }, default_url: "https://placehold.it/460x315"
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
