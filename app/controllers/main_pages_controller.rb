@@ -1,5 +1,7 @@
 class MainPagesController < ApplicationController
   
+  layout 'pdf', only: [:coffee, :breakfast, :lunch]
+
   def index
   	@events = Event.future_dates.limit(3)
   end

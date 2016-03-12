@@ -9,6 +9,12 @@ Rails.application.routes.draw do
 
   post 'main_pages/contact_form'
 
+  get 'main_pages/breakfast'
+
+  get 'main_pages/coffee'
+
+  get 'main_pages/lunch'
+
   # You can have the root of your site routed with "root"
   root 'main_pages#index'
 
