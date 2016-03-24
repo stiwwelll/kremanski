@@ -17,13 +17,13 @@
 
 html,
 body {
-	font-family: 'Futura', Arial, sans-serif;
-	color: #4D4946;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	font-size: 1em;
+	font-family: 'Futura', Arial, sans-serif;
+	color: #222222;
 }
 
 body {
@@ -37,6 +37,10 @@ h1 {
 	font-size: 2em;
 }
 
+h2 {
+	font-weight: 200;
+}
+
 h3 {
 	margin-top: 0;
 }
@@ -46,9 +50,11 @@ li {
 }
 
 p,
-li {
+li,
+li > a,
+ul {
 	font-family: 'Futura', Arial, sans-serif;
-	color: #4D4946;
+	color: #222222 !important;
 }
 
 .container-fluid {
@@ -94,6 +100,11 @@ li {
 	text-align: right;
 }
 
+.navbar li.active {
+	position: relative;
+	top: 2px;
+}
+
 .navbar li a:hover {
 	opacity: 0.8;
 	filter: alpha(opacity=80); /* For IE8 and earlier */
@@ -103,8 +114,6 @@ li {
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-
-
 
 .navbar-default .navbar-nav>.active>a, 
 .navbar-default .navbar-nav>.active>a:focus, 
@@ -123,7 +132,7 @@ li {
 
 #bs-example-navbar-collapse-1 {
 	border: none;
-	width: 100%;
+	width: 80%;
 	background-color: #fff;
 	opacity: 0.9;
 	filter: alpha(opacity=90); /* For IE8 and earlier */
@@ -164,8 +173,8 @@ li {
 	}
 
 	.navbar-nav {
-	position: relative;
-	top: 30px;
+		position: relative;
+		top: 30px;
 	}
 
 	.navbar > .container-fluid .navbar-brand {
