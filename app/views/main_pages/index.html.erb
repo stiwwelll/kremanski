@@ -10,7 +10,7 @@
       </button>
       <%= link_to image_tag("Kremanski_Logo_226px.png", class: "navbar-brand img-responsive"), main_pages_index_path %>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="#about">About <span class="sr-only">(current)</span></a></li>
         <li><a href="#events">Events</a></li>
@@ -29,10 +29,22 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner carousel-inner-header" role="listbox">
       <div class="item active center-block">
-        <%= image_tag("K_Header_Breakfast.jpg", class: "center-block") %>
+        <%= image_tag("K_Header_Superfood.jpg", class: "center-block") %>
       </div>
       <div class="item center-block">
-        <%= image_tag("K_Header_Superfood.jpg", class: "center-block") %>
+        <%= image_tag("Aussen_Hinten.jpg", class: "center-block") %>
+      </div>
+      <div class="item center-block">
+        <%= image_tag("Innen_Hinten.jpg", class: "center-block") %>
+      </div>
+      <div class="item center-block">
+        <%= image_tag("Interior.jpg", class: "center-block") %>
+      </div>
+      <div class="item center-block">
+        <%= image_tag("KaffeeMaschine.jpg", class: "center-block") %>
+      </div>
+      <div class="item center-block">
+        <%= image_tag("RundesSchild.jpg", class: "center-block") %>
       </div>
     </div>
 
@@ -69,8 +81,9 @@
   <div class="container">
     <div class="row">
       <div class="about">
-        <h2>&bdquo;Beispielzitat als Einstieg f&uuml;r den ABOUT-Text: Ein kleiner Schritt f&uuml;r die Menschheit...&ldquo;</h2>
-        <p>... wenn &uuml;berhaupt ein großer Schritt f&uuml;r uns. Lorem ipsum dolor sit amet, consectetuer adipi- scing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pel- lentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+        <p>Talking ABOUT Kremanski in brief is difficult, but we give it a try.<br>
+        <br>
+        It is of a bundle of different things, that we put together in one bar – creative food, homemade ice-cream, special drinks and diverse cultural events. From day to day and year to year we try to reveal as much as possible from the motivation and the various talents that we have gathered in our team. We believe, that it can only be good and become better, when we all – guests and team – feel well there and are happy with the location and the activities.</p>
       </div>
     </div>
   </div>
@@ -230,16 +243,37 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <%= link_to image_tag("Bild1_kl.png", class: "center-block", alt: "Voderzimmer"), image_path("Bild1_gr.jpg", alt: "Voderzimmer"), data: { lightbox: "Gallerie" }  %>
+        <%= link_to image_tag("Bild1_kl.png", class: "center-block", alt: "Voderzimmer1"), image_path("Bild1_gr.jpg", alt: "Voderzimmer1"), data: { lightbox: "Gallerie" }  %>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <%= link_to image_tag("Bild4_kl.png", class: "center-block", alt: "Voderzimmer"), image_path("Bild4_gr.jpg", alt: "Voderzimmer"), data: { lightbox: "Gallerie" }  %>
+        <%= link_to image_tag("Bild2_kl.png", class: "center-block", alt: "Voderzimmer2"), image_path("Bild2_gr.jpg", alt: "Voderzimmer2"), data: { lightbox: "Gallerie" }  %>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <%= link_to image_tag("Bild5_kl.png", class: "center-block", alt: "Voderzimmer"), image_path("Bild5_gr.jpg", alt: "Voderzimmer"), data: { lightbox: "Gallerie" }  %>
+        <%= link_to image_tag("Bild3_kl.png", class: "center-block", alt: "Maultaschen"), image_path("Bild3_gr.jpg", alt: "Maultaschen"), data: { lightbox: "Gallerie" }  %>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <%= link_to image_tag("Bild6_kl.png", class: "center-block", alt: "Voderzimmer"), image_path("Bild6_gr.jpg", alt: "Voderzimmer"), data: { lightbox: "Gallerie" }  %>
+        <%= link_to image_tag("Bild4_kl.png", class: "center-block", alt: "Ragout"), image_path("Bild4_gr.jpg", alt: "Ragout"), data: { lightbox: "Gallerie" }  %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <%= link_to image_tag("Bild5_kl.png", class: "center-block", alt: "Kaffee und Kuchen"), image_path("Bild5_gr.jpg", alt: "Kaffee und Kuchen"), data: { lightbox: "Gallerie" }  %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <%= link_to image_tag("Bild6_kl.png", class: "center-block", alt: "Mischpult"), image_path("Bild6_gr.jpg", alt: "Mischpult"), data: { lightbox: "Gallerie" }  %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <%= link_to image_tag("Bild7_kl.png", class: "center-block", alt: "Music1"), image_path("Bild7_gr.jpg", alt: "Music1"), data: { lightbox: "Gallerie" }  %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <%= link_to image_tag("Bild8_kl.png", class: "center-block", alt: "Music2"), image_path("Bild8_gr.jpg", alt: "Music2"), data: { lightbox: "Gallerie" }  %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <%= link_to image_tag("Bild9_kl.png", class: "center-block", alt: "Crowd1"), image_path("Bild9_gr.jpg", alt: "Crowd1"), data: { lightbox: "Gallerie" }  %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <%= link_to image_tag("Bild10_kl.png", class: "center-block", alt: "Crowd2"), image_path("Bild10_gr.jpg", alt: "Crowd2"), data: { lightbox: "Gallerie" }  %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <%= link_to image_tag("Bild11_kl.png", class: "center-block", alt: "Crowd2"), image_path("Bild11_gr.jpg", alt: "Crowd2"), data: { lightbox: "Gallerie" }  %>
       </div>
     </div>
   </div>
