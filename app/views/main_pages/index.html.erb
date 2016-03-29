@@ -16,7 +16,7 @@
         <li><a href="#events">Events</a></li>
         <li><a href="#menue">Menu</a></li>
         <li><a href="#partner" class="partner-nav">Partners &amp; Products</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li class="gallery-nav"><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -87,9 +87,7 @@
       </div>
     </div>
   </div>
-
-  <!-- Eis und Menue -->
-  <div class="container menue-row">
+  <div class="container">
     <div class="row">
       <div class="col-xs-6 col-xs-offset-3 col-sm-5 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-3 col-lg-offset-5">
         <%= image_tag("Eiskugel_frei_kl.png", class: "eiskugel center-block img-responsive") %>
@@ -133,9 +131,23 @@
     <% end %>
   <% end %>
   </div>
-  <h1 class="center-block ownevent">Book <strong>Kremanski</strong> for your own event!</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 center-block ownevent">
+        <h1>Book <strong>Kremanski</strong> for your own event!</h1>
+        <p>LIFE SHOULD BE CELEBRATED!<br>
+        <br>
+        You want to celebrate or invite friends or business partners – rent KREMANSKI!<br>
+        <br>
+        Whether you want a special buffet, set dinner, live-music or DJ – we can talk about all your ideas. The whole place fits 40 to 90 people depending on the amount of tables. The small bar in the back fits up to 25 people standing. Reserving just one table is possible as well. In terms of financial conditions, we are open to make individual deals.<br>
+        <br>
+        So, please feel free to talk to us about your personal idea and together we figure out something that fits!<br>
+        <br>
+        Please note: Because of noise-sensitive neighbours we can´t be a real „club space“ until the morning hours.</p>
+      </div>
+    </div>
+  </div>
 </div>
-
 <div class="container cocktail">
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-1">
@@ -171,7 +183,7 @@
         You are also welcome  to order BIG AMOUNTS (like 10-40 meals) – once or on a regular basis – please contact us and we will send an individual composition of meals to you!
         </p>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+      <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-md-3 col-lg-3">
         <%= image_tag("Post_It_Menu.png", class: "center-block img-responsive") %>
       </div>
     </div>
@@ -188,6 +200,13 @@
     </div>
   </div>
   <h2 class="center-block partner-intro">Find out more about our culinary partners...</h2>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3 col-sm-5 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-3 col-lg-offset-5">
+      <%= image_tag("Chia_Muesli_frei.png", class: "center-block img-responsive") %>
+    </div>
+  </div>
 </div>
 
 <!-- Partner Carousel -->
@@ -279,6 +298,14 @@
   </div>
 </div>
 
+<!-- Muffin -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3 col-sm-5 col-sm-offset-4 col-md-4 col-md-offset-8 col-lg-3 col-lg-offset-7">
+      <%= image_tag("SchokoMuffin_frei.png", class: "center-block img-responsive muffin") %>
+    </div>
+  </div>
+</div>
 
 <!-- Kontakt -->
 <div id="contact" class="anchor">
