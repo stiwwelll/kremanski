@@ -15,6 +15,16 @@
  *= require_self
  */
 
+@font-face {
+  font-family: 'futura_light';
+  src: asset-url('futura_light-webfont.eot');
+  src: asset-url('futura_light-webfont.eot?#iefix') format('embedded-opentype'),
+       asset-url('futura_light-webfont.woff2') format('woff2'),
+       asset-url('futura_light-webfont.woff') format('woff'),
+       asset-url('futura_light-webfont.ttf') format('truetype'),
+       asset-url('futura_light-webfont.svg#futura_lightregular') format('svg');
+}
+
 html,
 body {
 	height: 100%;
@@ -22,7 +32,7 @@ body {
 	padding: 0;
 	width: 100%;
 	font-size: 1em;
-	font-family: 'Futura', Arial, sans-serif;
+	font-family: 'futura_light', Arial, sans-serif;
 	color: #222222;
 }
 
@@ -53,7 +63,7 @@ p,
 li,
 li > a,
 ul {
-	font-family: 'Futura', Arial, sans-serif;
+	font-family: 'futura_light', Arial, sans-serif;
 	color: #222222 !important;
 }
 
@@ -103,6 +113,7 @@ ul {
 .navbar li.active {
 	position: relative;
 	top: 2px;
+	font-weight: bold;
 }
 
 .navbar li a:hover {
@@ -132,10 +143,13 @@ ul {
 
 #bs-example-navbar-collapse-1 {
 	border: none;
-	width: 80%;
 	background-color: #fff;
 	opacity: 0.9;
 	filter: alpha(opacity=90); /* For IE8 and earlier */
+}
+
+.nav>li + .gallery-nav {
+	display: none;
 }
 
 /* Extra small devices (phones, less than 768px) */
@@ -146,6 +160,7 @@ ul {
 
 	#bs-example-navbar-collapse-1 {
 		background-color: transparent;
+		width: 70%;
 	}
 
 	.navbar li {
@@ -184,6 +199,10 @@ ul {
 	.navbar-right {
 		margin-right: 15px;
 		margin-left: 0;
+	}
+
+	.nav>li + .gallery-nav {
+		display: block;
 	}
 
 }

@@ -59,6 +59,7 @@
 	font-size: 1.1em;
 	text-transform: uppercase;
 	width: 70%;
+	line-height: 1.5em;
 }
 
 .loeffelpfeil3 {
@@ -127,9 +128,8 @@
 	margin-top: 50px;
 }
 
-.ownevent {
+.ownevent h1 {
 	text-transform: uppercase;
-	text-align: center;
 	margin-top: 70px;
 }
 
@@ -138,7 +138,7 @@
 }
 
 .glas {
-	margin-top: 30px;
+	margin-top: 50px;
 }
 
 .menu_headline {
@@ -152,7 +152,9 @@
 .partner-intro {
 	text-transform: uppercase;
 	text-align: center;
-	margin-top: 70px;
+	margin-top: 80px;
+	margin-bottom: 70px;
+	font-size: 1.7em;
 } 
 
 .loeffel-links-partner,
@@ -172,8 +174,13 @@
 	top: 30px;
 }
 
-#gallerie {
+#gallery {
 	margin-top: 80px;
+	display: none;
+}
+
+.muffin {
+	display: none;
 }
 
 #kontakt {
@@ -270,14 +277,17 @@ textarea:focus {
 #map {
 	height: 250px;
 	width: 100%;
+	display: none;
 }
 
+address {
+	text-align: center;
+}
 
 .impressum {
 	float:right;
 	font-size: 0.9em;
 	color: #4D4946;
-	margin-top: 50px;
 	text-transform: uppercase;
 }
 
@@ -336,6 +346,23 @@ textarea:focus {
 	.loeffel-rechts-partner {
 		display: block;
 	}
+
+	#gallery {
+		display: block;
+	}
+
+	.muffin {
+		display: block;
+		margin-top: 80px;
+	}
+
+	#map {
+		display: block;
+	}
+
+	.impressum {
+		margin-top: 50px;
+	}
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -343,10 +370,6 @@ textarea:focus {
 	address {
 		padding-top: 15px;
 		font-size: 1.2em;
-	}
-
-	.menue-row h3 {
-		padding-top: 20px;
 	}
 
 	.archive {
