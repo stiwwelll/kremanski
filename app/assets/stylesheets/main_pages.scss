@@ -130,6 +130,7 @@
 
 .ownevent h1 {
 	text-transform: uppercase;
+	text-align: left;
 	margin-top: 70px;
 }
 
@@ -278,10 +279,6 @@ textarea:focus {
 	height: 250px;
 	width: 100%;
 	display: none;
-}
-
-address {
-	text-align: center;
 }
 
 .impressum {
