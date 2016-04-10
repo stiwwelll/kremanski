@@ -2,16 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#about.anchor {
-	padding-top: 40px;
-}
+#about.anchor,
 #menue.anchor,
+#gallery.anchor, 
 #partner.anchor {
 	padding-top: 90px;
 }
 
-#events.anchor,
-#gallery.anchor {
+#events.anchor {
 	padding-top: 80px;
 }
 
@@ -145,6 +143,10 @@
 	padding-bottom: 30px;
 }
 
+.post-it {
+	margin: 20px 0;
+}
+
 .menu-papers {
 	margin-top: 10px;
 }
@@ -177,6 +179,13 @@
 #gallery {
 	margin-top: 80px;
 	display: none;
+}
+
+.instagram-teaser {
+	text-align: center;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	margin-top: 20px;
 }
 
 .muffin {
@@ -280,11 +289,15 @@ textarea:focus {
 	display: none;
 }
 
+address {
+	text-align: center;
+}
+
 .impressum {
-	float:right;
 	font-size: 0.9em;
 	color: #4D4946;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 .impressum:hover,
@@ -331,6 +344,10 @@ textarea:focus {
 		font-size: 1.3em;
 	}
 
+	.post-it {
+		margin: 0;
+	}
+
 	.swipe-icon-header,
 	.swipe-icon-partner {
 		display: none;
@@ -347,6 +364,14 @@ textarea:focus {
 		display: block;
 	}
 
+	.gallery-headline {
+		margin-bottom: 20px;
+	}
+
+	.instagram-teaser {
+		font-size: 1.3em;
+	}
+
 	.muffin {
 		display: block;
 		margin-top: 80px;
@@ -354,10 +379,22 @@ textarea:focus {
 
 	#map {
 		display: block;
+		height: 250px;
+		width: 100%;
 	}
 
+	.imprint {
+		padding-right: 0;
+	}
+	
+	address {
+		text-align: left;
+	}
+	
 	.impressum {
 		margin-top: 50px;
+		text-align: left;
+		float: right;
 	}
 }
 
@@ -402,7 +439,16 @@ textarea:focus {
 
 	.loeffel-rechts {
 		right: -5%;
-	}	
+	}
+
+	#map {
+		width: 88%;
+	}
+
+	.imprint {
+		width: 88%;
+		padding-right: 0;
+	}
 }
 
 /* Large devices (large desktops, 1200px and up) */
