@@ -160,9 +160,14 @@ li {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
+	.navbar-default {
+		font-size: 0.5em;
+	}
+
 	#bs-example-navbar-collapse-1 {
 		background-color: transparent;
 		width: 70%;
+		padding-left: 0;
 	}
 
 	.navbar li {
@@ -195,7 +200,8 @@ li {
 	}
 
 	.navbar > .container-fluid .navbar-brand {
-		margin-left: 15px;
+		margin-left: 5px;
+		padding-right: 0;
 	}
 
 	.navbar-right {
@@ -216,6 +222,10 @@ li {
 		font-size: 1.2em;
 	}
 
+	.navbar-default {
+		font-size: 0.9em;
+	}
+
 	.navbar li a {
 		font-size: 0.7em;
 		padding: 0;
@@ -228,5 +238,9 @@ li {
 
 	.navbar .partner-nav {
 		width: 160px;
+	}
+
+	.navbar > .container-fluid .navbar-brand {
+		margin-left: 15px;
 	}
 }
