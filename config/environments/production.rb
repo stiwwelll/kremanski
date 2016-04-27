@@ -76,6 +76,13 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  #Mailgun Setup
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+        api_key: ENV['MAILGUN_API_KEY'],
+        domain: ENV['MAILGUN_DOMAIN']
+  }
+
   #Sets paperclick to upload image to AWS S3
   config.paperclip_defaults = {
     storage: :s3,
