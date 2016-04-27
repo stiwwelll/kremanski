@@ -25,7 +25,7 @@
 
 <!-- News Carousel -->
 <div class="container carousel-container">
-  <div id="carousel-example-generic-1" class="carousel slide" data-ride="carousel">
+  <div id="carousel-example-generic-1" class="carousel slide" data-ride="carousel" data-interval="3500">
     <!-- Wrapper for slides -->
     <div class="carousel-inner carousel-inner-header" role="listbox">
       <div class="item active center-block">
@@ -224,7 +224,7 @@
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
         <%= image_tag("Headline_Partner.png", class: "center-block img-responsive partnerueberschrift") %>
-        <div id="carousel-example-generic-2" class="carousel slide" data-ride="carousel">
+        <div id="carousel-example-generic-2" class="carousel slide" data-ride="carousel" data-interval="3500">
           <!-- Wrapper for slides -->
           <div class="carousel-inner carousel-inner-partner" role="listbox">
             <div class="item active">
@@ -328,7 +328,8 @@
         <%= link_to image_tag("7_Sofa-Kaffee_kl.png", class: "center-block", alt: "Sofakaffee"), image_path("7_Sofa-Kaffee.jpg", alt: "Sofakaffee"), data: { lightbox: "Gallerie" }  %>
       </div>
     </div>
-    <p class="instagram-teaser center-block">Wanna see more? Check Instagram</p>
+    <%= link_to "Wanna see more? Check Instagram", "https://www.instagram.com/cafekremanski/", class: "instagram-teaser center-block", target: "_blank" %>
+    <a href=""class=""></a>
   </div>
 </div>
 
