@@ -86,6 +86,8 @@ Rails.application.configure do
     }
   }
 
+  config.action_mailer.default_url_options = { :host => 'kremanski.herokuapp.com' }
+
   # Add the fonts path
   config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 
