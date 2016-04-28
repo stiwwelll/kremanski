@@ -8,7 +8,7 @@ class UserMailer < ApplicationMailer
   	@email = email
 
     mail(from:    "#{name} <#{email}>",
-      	 to:      'marco.steffensky@gmail.com',
+      	 to:      'a.bembenek@gmx.de',
       	 subject: "Eine neue Nachricht von #{name}")
   end
 
