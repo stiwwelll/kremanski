@@ -19,9 +19,12 @@
 # Ignore application configuration
 /config/application.yml
 
+# Ignore database configuration
+
+/config/database.yml
+
 # Ignore mac archiving file
 .DS_Store
 
 # Paperclip image library
 /public/system
-
